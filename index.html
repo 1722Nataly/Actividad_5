@@ -119,22 +119,42 @@
 
     <!-- MODAL -->
   <section id="modal-css-only">
-  <h2>Modal</h2>
-  <p>Haz clic en el botón para ver el modal de confirmación.</p>
+  <h2>Modales CSS Only</h2>
+  <p>Haz clic en los botones para ver los diferentes modales.</p>
 
-  <!-- Checkbox oculto para controlar el modal -->
-  <input type="checkbox" id="modal-toggle" class="modal-toggle" />
-
-  <!-- Botón que activa el modal -->
-  <label for="modal-toggle" class="btn btn--primary">Mostrar Confirmación</label>
-
-  <!-- Contenido del modal -->
+  <!-- Modal Confirmación -->
+  <input type="checkbox" id="modal-confirm-toggle" class="modal-toggle" />
+  <label for="modal-confirm-toggle" class="btn btn--primary btn-confirm">Mostrar Confirmación</label>
   <div class="modal">
-    <div class="modal__content">
-      <label for="modal-toggle" class="modal__close">&times;</label>
+    <div class="modal__content modal-confirm">
+      <label for="modal-confirm-toggle" class="modal__close" aria-label="Cerrar modal">&times;</label>
       <h3>✅ ¡Acción completada!</h3>
       <p>El formulario ha sido enviado exitosamente.</p>
-      <label for="modal-toggle" class="btn btn--secondary">Cerrar</label>
+      <label for="modal-confirm-toggle" class="btn btn--secondary">Cerrar</label>
+    </div>
+  </div>
+
+  <!-- Modal Simple -->
+  <input type="checkbox" id="modal-simple-toggle" class="modal-toggle" />
+  <label for="modal-simple-toggle" class="btn btn--primary btn-simple">Mostrar Modal Simple</label>
+  <div class="modal">
+    <div class="modal__content modal-simple">
+      <label for="modal-simple-toggle" class="modal__close" aria-label="Cerrar modal">&times;</label>
+      <h3>Modal Simple</h3>
+      <p>Este es un modal simple para mostrar información básica.</p>
+      <label for="modal-simple-toggle" class="btn btn--secondary">Cerrar</label>
+    </div>
+  </div>
+
+  <!-- Modal Alerta -->
+  <input type="checkbox" id="modal-alert-toggle" class="modal-toggle" />
+  <label for="modal-alert-toggle" class="btn btn--primary btn-alert">Mostrar Alerta</label>
+  <div class="modal">
+    <div class="modal__content modal-alert">
+      <label for="modal-alert-toggle" class="modal__close" aria-label="Cerrar modal">&times;</label>
+      <h3>⚠️ Alerta</h3>
+      <p>Este es un mensaje de alerta importante para el usuario.</p>
+      <label for="modal-alert-toggle" class="btn btn--secondary">Cerrar</label>
     </div>
   </div>
 </section>

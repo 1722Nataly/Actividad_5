@@ -337,19 +337,22 @@ h2 {
   display: none;
 }
 
-/* Modal oculto por defecto */
 .modal {
   display: none;
   position: fixed;
   top: 0; left: 0;
-  width: 100vw; height: 100vh;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0,0,0,0.6);
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
-/* Estilo del contenido del modal */
+.modal-toggle:checked + label + .modal {
+  display: flex;
+}
+
 .modal__content {
   background-color: white;
   padding: 2rem;
@@ -362,7 +365,6 @@ h2 {
   animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Botón de cerrar dentro del modal */
 .modal__close {
   position: absolute;
   top: 0.5rem;
@@ -370,28 +372,88 @@ h2 {
   font-size: 1.5rem;
   cursor: pointer;
   color: #e74c3c;
-  border: none;
   background: none;
+  border: none;
 }
 
-/* Mostrar el modal cuando el checkbox está activado */
-.modal-toggle:checked + label + .modal {
-  display: flex;
-}
-
-/* Animación de aparición */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsivo */
-@media (max-width: 600px) {
-  .modal__content {
-    padding: 1.5rem;
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+/* Colores para cada modal */
+.modal-confirm {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.modal-simple {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.modal-alert {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Botones generales */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0.5rem 0.5rem 1rem 0;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botones para abrir modales con colores específicos */
+.btn-confirm {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-confirm:hover {
+  background-color: #218838;
+}
+
+.btn-simple {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-simple:hover {
+  background-color: #0056b3;
+}
+
+.btn-alert {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-alert:hover {
+  background-color: #b02a37;
+}
+
+/* Botones secundarios (cerrar) */
+.btn--secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn--secondary:hover {
+  background-color: #217dbb;
+}
 /* ===== TOOLTIP ===== */
 .tooltip-container {
   background-color: #ceeb49; 
