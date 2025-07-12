@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biblioteca de Componentes UI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar__logo">UI Library</div>
+    <ul class="navbar__links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#botones">Botones</a></li>
+      <li><a href="#tarjetas">Tarjetas</a></li>
+      <li><a href="#formularios">Formularios</a></li>
+      <li><a href="#modal-css-only">Modal</a></li> 
+      <li><a href="#tooltip">Tooltip</a></li>
+      <li><a href="#acordeon">Acordeón</a></li>
+      <li><a href="#badges">Badges</a></li>
+      <li><a href="#alertas">Alertas</a></li>
+      <li><a href="#tabs">Tabs</a></li>
+    </ul>
+  </nav>
+    
+  <main class="container">
+    <h1></h1>/
+
+  <section class="hero" id=" inicio">
+  <div class="hero__content">
+    <h1 class="hero__title">Biblioteca de Componentes UI</h1>
+    <p class="hero__subtitle">Diseñada con CSS avanzado: variables, flexbox, grid, animaciones, media queries y más.</p>
+  </div>
+</section>  
+
+    <!-- BOTONES -->
+    <section id="botones">
+      <h2>Botones</h2>
+      <button class="btn btn--primary">Primario</button>
+      <button class="btn btn--secondary">Secundario</button>
+      <button class="btn btn--primary" disabled>Deshabilitado</button>
+    </section>
+
+    <!-- TARJETAS -->
+    <section id="tarjetas">
+      <h2>Tarjetas</h2>
+      <div class="cards-container">
+        <!-- Tarjeta 1 -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Icono de usuario" class="card__icon" />
+          <h3 class="card__title">Perfil de Usuario</h3>
+          <p class="card__content">Gestiona tu información personal y preferencias desde aquí.</p>
+          <button class="btn btn--primary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="btn__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            Guardar
+          </button>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="Icono de configuración" class="card__icon" />
+          <h3 class="card__title">Configuración</h3>
+          <p class="card__content">Ajusta las opciones de la aplicación a tu gusto.</p>
+          <button class="btn btn--secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="btn__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+            Modificar
+          </button>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt="Icono de ayuda" class="card__icon" />
+          <h3 class="card__title">Soporte</h3>
+          <p class="card__content">Contacta con nuestro equipo para resolver tus dudas.</p>
+          <button class="btn btn--primary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="btn__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2m-4-4h4m-4 0v-4a4 4 0 00-8 0v4m4 0H7" />
+            </svg>
+            Contactar
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULARIOS -->
+    <section id="formularios">
+      <h2>Formulario</h2>
+      <form class="form">
+        <label class="form__label">Nombre</label>
+        <input type="text" class="form__input" placeholder="Tu nombre" />
+
+        <label class="form__label">Correo</label>
+        <input type="email" class="form__input" placeholder="tucorreo@example.com" />
+
+        <label class="form__label">Género</label>
+        <select class="form__input">
+          <option>Seleccionar</option>
+          <option>Femenino</option>
+          <option>Masculino</option>
+          <option>Otro</option>
+        </select>
+
+        <label class="form__checkbox">
+          <input type="checkbox" /> Acepto términos
+        </label>
+
+        <button class="btn btn--primary" type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <!-- MODAL -->
+  <section id="modal-css-only">
+  <h2>Modal</h2>
+  <p>Haz clic en el botón para ver el modal de confirmación.</p>
+
+  <!-- Checkbox oculto para controlar el modal -->
+  <input type="checkbox" id="modal-toggle" class="modal-toggle" />
+
+  <!-- Botón que activa el modal -->
+  <label for="modal-toggle" class="btn btn--primary">Mostrar Confirmación</label>
+
+  <!-- Contenido del modal -->
+  <div class="modal">
+    <div class="modal__content">
+      <label for="modal-toggle" class="modal__close">&times;</label>
+      <h3>✅ ¡Acción completada!</h3>
+      <p>El formulario ha sido enviado exitosamente.</p>
+      <label for="modal-toggle" class="btn btn--secondary">Cerrar</label>
+    </div>
+  </div>
+</section>
+
+    <!-- TOOLTIP -->
+  <section id="tooltip">
+  <h2>Tooltip</h2>
+  <div class="tooltip-container">
+    Pasa el mouse aquí
+    <span class="tooltip-text">Este es un tooltip</span>
+  </div>
+</section>
+
+    <!-- ACORDEÓN -->
+    <section id="acordeon">
+      <h2>Acordeón</h2>
+      <div class="acordeon">
+        <button class="acordeon__toggle">Sección 1</button>
+        <div class="acordeon__contenido">
+          <p>Contenido de la sección 1</p>
+        </div>
+        <button class="acordeon__toggle">Sección 2</button>
+        <div class="acordeon__contenido">
+          <p>Contenido de la sección 2</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BADGES -->
+    <section id="badges">
+      <h2>Badges</h2>
+      <span class="badge badge--success">Nuevo</span>
+      <span class="badge badge--warning">3</span>
+      <span class="badge badge--info">Info</span>
+    </section>
+
+    <!-- ALERTAS -->
+    <section id="alertas">
+      <h2>Alertas</h2>
+      <div class="alert alert--success">¡Operación exitosa!</div>
+      <div class="alert alert--warning">Advertencia: revisa los campos.</div>
+      <div class="alert alert--error">Error: no se pudo guardar.</div>
+    </section>
+
+    <!-- TABS -->
+    <section id="tabs">
+      <h2>Tabs</h2>
+      <div class="tabs">
+        <input type="radio" name="tabset" id="tab1" checked />
+        <label for="tab1" class="tabs__label">Tab 1</label>
+        <input type="radio" name="tabset" id="tab2" />
+        <label for="tab2" class="tabs__label">Tab 2</label>
+        <input type="radio" name="tabset" id="tab3" />
+        <label for="tab3" class="tabs__label">Tab 3</label>
+        <div class="tabs__content" id="tab-content1">
+          <p>Contenido de la pestaña 1.</p>
+        </div>
+        <div class="tabs__content" id="tab-content2">
+          <p>Contenido de la pestaña 2.</p>
+        </div>
+        <div class="tabs__content" id="tab-content3">
+          <p>Contenido de la pestaña 3.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+
+  <footer class="footer">
+    <p>&copy; 2025 - Biblioteca de Componentes UI - UTM</p>
+  </footer>
+</body>
+</html>
