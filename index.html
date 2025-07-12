@@ -7,10 +7,14 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar">
+<nav class="navbar">
     <div class="navbar__logo">UI Library</div>
-    <ul class="navbar__links">
+    <button class="navbar__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navbar-menu">
+    <span class="hamburger"></span>
+    <span class="hamburger"></span>
+    <span class="hamburger"></span>
+  </button>
+    <ul class="navbar__links"id="navbar-menu">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#botones">Botones</a></li>
       <li><a href="#tarjetas">Tarjetas</a></li>
@@ -27,7 +31,7 @@
   <main id="inicio" class="container">
     <h1></h1>
 
-  <section class="hero" id=" inicio">
+  <section class="hero" id="inicio">
   <div class="hero__content">
     <h1 class="hero__title">Biblioteca de Componentes UI</h1>
     <p class="hero__subtitle">Diseñada con CSS avanzado: variables, flexbox, grid, animaciones, media queries y más.</p>
@@ -198,10 +202,28 @@
     </section>
   </main>
   
-
+  </script>
   <footer class="footer">
     <p>&copy; 2025 - Biblioteca de Componentes UI - UTM</p>
   </footer>
+  <script>
+  const toggleButton = document.querySelector('.navbar__toggle');
+  const navLinks = document.querySelector('.navbar__links');
+  const navItems = document.querySelectorAll('.navbar__links a');
+
+  toggleButton.addEventListener('click', () => {
+    const expanded = toggleButton.getAttribute('aria-expanded') === 'true' || false;
+    toggleButton.setAttribute('aria-expanded', !expanded);
+    navLinks.classList.toggle('active');
+  });
+
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      toggleButton.setAttribute('aria-expanded', false);
+    });
+  });
+</script>
 </body>
 </html>
 
